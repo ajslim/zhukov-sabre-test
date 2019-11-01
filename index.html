@@ -93,8 +93,9 @@
 	<script>
 		function changeText()
 			{
-		 document.getElementById('answer').innerHTML = action.gsx$callanswer.$t;
-		 document.getElementById('explain').innerHTML = action.gsx$callexplanationifneeded.$t;
+			const action = data.feed.entry[id];
+		 	document.getElementById('answer').innerHTML = action.gsx$callanswer.$t;
+		 	document.getElementById('explain').innerHTML = action.gsx$callexplanationifneeded.$t;
 			}
 	</script>
 	
