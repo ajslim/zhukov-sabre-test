@@ -93,8 +93,8 @@
 	<script>
 		function changeText()
 			{
-		 document.getElementById('answer').innerHTML = 'Parry-Riposte, Touch Left';
-		 document.getElementById('explain').innerHTML = 'Because Because Because Because Because Because Because Because Because Because Because Because';
+		 document.getElementById('answer').innerHTML = action.gsx$callanswer.$t;
+		 document.getElementById('explain').innerHTML = action.gsx$callexplanationifneeded.$t;
 			}
 	</script>
 	
@@ -124,15 +124,12 @@
 		const videoWebM = document.getElementById("videoWebM"); 
 		const videoTitle = document.getElementById("videoTitle"); 
 		const videoMp4 = document.getElementById("videoMp4");
-		const callAnswer = document.getElementById("answer");
-		const theAction = document.getElementById("theaction");
 		const action = data.feed.entry[id];
 
 		videoWebM.src = action.gsx$hdmp4link.$t;
 		videoMp4.src = action.gsx$hdwebmlink.$t;
 		theAction.load();
 		
-		callAnswer.innerHTML = action.gsx$callanswer.$t;
 		videoTitle.innerHTML = action.gsx$videotitle.$t;
 	</script>
 </html>
