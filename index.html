@@ -53,7 +53,7 @@
 		</div>
 		
 		<div id="vidname">
-			<p class="videoname">Berder Egorian 9-13 T4 2017 Seoul W GP</p>
+			<p class="videoname" id="videoTitle"></p>
 		</div>
 		
 		<div class="centered">	
@@ -122,6 +122,7 @@
 		const id = urlParams.get('id');
 
 		const videoWebM = document.getElementById("videoWebM"); 
+		const videoTitle = document.getElementById("videoTitle"); 
 		const videoMp4 = document.getElementById("videoMp4");
 		const callAnswer = document.getElementById("answer");
 		const theAction = document.getElementById("theaction");
@@ -132,5 +133,6 @@
 		theAction.load();
 		
 		callAnswer.innerHTML = action.gsx$callanswer.$t;
+		videoTitle.innerHTML = action.gsx$videotitle.$t;
 	</script>
 </html>
