@@ -8,7 +8,7 @@
 		<script>
 			function loadData(data) {
 				const urlParams = new URLSearchParams(window.location.search);
-				const myParam = urlParams.get('id');
+				const id = urlParams.get('id');
 				
 				console.log(data.feed.entry[id]);
 			}
