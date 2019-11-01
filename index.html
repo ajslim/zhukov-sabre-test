@@ -7,7 +7,10 @@
 		<link rel="stylesheet" href="Test-css.css" type="text/css">
 		<script>
 			function loadData(data) {
-				console.log(data);
+				const urlParams = new URLSearchParams(window.location.search);
+				const myParam = urlParams.get('id');
+				
+				console.log(data.feed.entry[id]);
 			}
 		</script>
 		<script type="text/javascript" language="javascript" src="https://spreadsheets.google.com/feeds/list/1GOpLUqdebNPWNui4W5nPuTwLFpcMbIkkS5Q5w31lPdE/od6/public/values?alt=json-in-script&callback=loadData"></script> 
