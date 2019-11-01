@@ -10,9 +10,9 @@
 				const urlParams = new URLSearchParams(window.location.search);
 				const id = urlParams.get('id');
 				
-				const videoWebM = document.getElementById("videoWebM").value; 
-				const videoMp4 = document.getElementById("videoMp4").value;
-				const callAnswer = document.getElementById("answer").value;
+				const videoWebM = document.getElementById("videoWebM"); 
+				const videoMp4 = document.getElementById("videoMp4");
+				const callAnswer = document.getElementById("answer");
 				const action = data.feed.entry[id];
 				
 				videoWebM.src = action.gsx$hdmp4link.$t;
