@@ -124,10 +124,13 @@
 		const videoWebM = document.getElementById("videoWebM"); 
 		const videoMp4 = document.getElementById("videoMp4");
 		const callAnswer = document.getElementById("answer");
+		const theAction = document.getElementById("theaction");
 		const action = data.feed.entry[id];
 
 		videoWebM.src = action.gsx$hdmp4link.$t;
 		videoMp4.src = action.gsx$hdwebmlink.$t;
+		theAction.load();
+		
 		callAnswer.innerHTML = action.gsx$callanswer.$t;
 	</script>
 </html>
