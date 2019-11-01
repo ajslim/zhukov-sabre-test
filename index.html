@@ -10,7 +10,14 @@
 				const urlParams = new URLSearchParams(window.location.search);
 				const id = urlParams.get('id');
 				
-				console.log(data.feed.entry[id]);
+				const videoWebM = document.getElementById("videoWebM").value; 
+				const videoMp4 = document.getElementById("videoMp4").value;
+				const callAnswer = document.getElementById("answer").value;
+				const action = data.feed.entry[id];
+				
+				videoWebM.src = action.gsx$hdmp4link.$t;
+				videoMp4.src = action.gsx$hdwebmlink.$t;
+				callAnswer.innerHTML = action.gsx$callanswer.$t;
 			}
 		</script>
 		<script type="text/javascript" language="javascript" src="https://spreadsheets.google.com/feeds/list/1GOpLUqdebNPWNui4W5nPuTwLFpcMbIkkS5Q5w31lPdE/od6/public/values?alt=json-in-script&callback=loadData"></script> 
@@ -42,8 +49,8 @@
 		<div id="videocall">
 			<div style='position:relative;padding-bottom:54%'>
 				<video frameborder='0' scrolling='no' width='100%' height='100%' style='position:absolute;top:0;left:0' allowfullscreen loop autoplay controls id="theaction">
-					<!--<source src="https://giant.gfycat.com/MildSlimHerring.webm" type="video/webm">
-					<source src="https://giant.gfycat.com/MildSlimHerring.mp4" type="video/mp4">-->
+					<source id='videoWebM' src="" type="video/webm">
+					<source id='videoMp4' src="" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
 			</div>
